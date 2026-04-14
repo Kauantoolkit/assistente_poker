@@ -4,6 +4,7 @@ import { PositionSelector } from './components/PositionSelector';
 import { ActionSelector } from './components/ActionSelector';
 import { SavedRanges } from './components/SavedRanges';
 import { ImportStrategy } from './components/ImportStrategy';
+import { JsonGuide } from './components/JsonGuide';
 import { GameContext } from './components/GameContext';
 import { ContextTip } from './components/ContextTip';
 import { PushFoldPanel } from './components/PushFoldPanel';
@@ -146,6 +147,7 @@ export default function App() {
               </span>
             )}
             <ImportStrategy onImport={handleImport} />
+            <JsonGuide />
 
             {/* Sidebar toggle (mobile) */}
             <button
