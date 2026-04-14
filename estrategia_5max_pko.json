@@ -1,0 +1,227 @@
+{
+  "torneio": {
+    "nome": "Twinkle Star $0.55 NLHE 5-Max Big Progressive KO",
+    "buy_in": 0.55,
+    "garantido": 75,
+    "formato": "PKO Progressivo",
+    "max_jogadores_mesa": 5,
+    "fichas_iniciais": 5000,
+    "reentradas": 3,
+    "registro_tardio_min": 45
+  },
+  "legenda_acoes": {
+    "R": "Raise / Open (RFI)",
+    "T": "3-Bet",
+    "C": "Call / Defend",
+    "L": "Limp (apenas SB)",
+    "F": "Fold"
+  },
+  "posicoes": {
+    "UTG": {
+      "descricao": "Posição mais difícil em 5-max. Jogue apenas mãos fortes.",
+      "tamanho_open": "2.5x a 3x",
+      "raise_rfi": [
+        "AA","KK","QQ","JJ","TT","99","88","77",
+        "AKs","AQs","AJs","ATs",
+        "AKo","AQo","AJo",
+        "KQs","KJs","QJs","JTs"
+      ],
+      "3bet_vs_raise": ["AA","KK","QQ","JJ","AKs","AKo"],
+      "fold_vs_3bet": ["77","88","JTs","QJs","AJs","AJo"],
+      "notas": "4-bet apenas com AA, KK, QQ, AKs, AKo"
+    },
+    "CO": {
+      "descricao": "Permite abrir mais amplo que UTG. Sem opens, roube bastante.",
+      "tamanho_open": "2.2x a 2.5x",
+      "raise_rfi": [
+        "AA","KK","QQ","JJ","TT","99","88","77","66","55",
+        "AKs","AQs","AJs","ATs","A9s","A8s",
+        "AKo","AQo","AJo","ATo",
+        "KQs","KJs","KTs","KQo",
+        "QJs","QTs","JTs","J9s","T9s"
+      ],
+      "call_vs_utg": [
+        "TT","99","88",
+        "AQs","AJs","KQs","QJs","JTs"
+      ],
+      "3bet_vs_utg": [
+        "AA","KK","QQ","JJ","AKs","AKo",
+        "A5s","A4s"
+      ],
+      "notas": "A4s-A5s são 3-bets de blefe com blocker + equity"
+    },
+    "BTN": {
+      "descricao": "Melhor posição. Abra muito amplo. Age por último no pós-flop.",
+      "tamanho_open": "2x a 2.2x",
+      "raise_rfi": [
+        "AA","KK","QQ","JJ","TT","99","88","77","66","55","44","33","22",
+        "AKs","AQs","AJs","ATs","A9s","A8s","A7s","A6s","A5s","A4s","A3s","A2s",
+        "AKo","AQo","AJo","ATo","A9o","A8o",
+        "KQs","KJs","KTs","K9s","K8s","K7s","KQo","KJo","KTo",
+        "QJs","QTs","Q9s","Q8s","QJo",
+        "JTs","J9s","J8s",
+        "T9s","T8s","T7s",
+        "98s","97s","96s",
+        "87s","86s","85s",
+        "76s","65s","54s"
+      ],
+      "call_vs_raise": [
+        "JJ","TT","99","88",
+        "AQs","AJs","ATs","KQs","QJs","JTs","T9s"
+      ],
+      "3bet_vs_steal": [
+        "AA","KK","QQ","JJ","TT","AKs","AKo",
+        "A5s","A4s","A3s","KQs","QJs"
+      ],
+      "notas": "Fold vs 3-bet grande com broadways fracas"
+    },
+    "SB": {
+      "descricao": "Age antes do BB mas depois de todos. Prefira raise ou fold. Limp apenas especulativo.",
+      "tamanho_open": "2.5x vs BB",
+      "raise_rfi": [
+        "AA","KK","QQ","JJ","TT","99","88","77","66","55","44",
+        "AKs","AQs","AJs","ATs","A9s","A8s","A7s","A6s",
+        "AKo","AQo","AJo","ATo",
+        "KQs","KJs","KTs","K9s","KQo",
+        "QJs","QTs","JTs","J9s",
+        "T9s","98s","87s"
+      ],
+      "limp_especulativo": [
+        "33","22",
+        "A5o","A4o","A3o","A2o",
+        "76s","65s","54s"
+      ],
+      "3bet_vs_open": [
+        "AA","KK","QQ","AKs","AKo",
+        "A4s","A3s"
+      ],
+      "notas": "Limp-3bet com AA/KK é possível vs BB passivo. Fold mãos fracas vs raise pós-limp."
+    },
+    "BB": {
+      "descricao": "Você já pagou 1 blind. Defenda bastante vs BTN/SB. Mais cuidado vs UTG.",
+      "defend_vs_btn": [
+        "55","44","33","22",
+        "A9s","A8s","A7s","A6s","A5s","A4s","A3s","A2s",
+        "A9o","A8o","A7o","A6o","A5o",
+        "KTs","K9s","K8s","K7s","K6s","KJo","KTo","K9o",
+        "QTs","Q9s","Q8s","Q7s","QJo",
+        "J9s","J8s","J7s",
+        "T8s","T7s","T6s",
+        "98s","97s","96s",
+        "87s","86s","85s",
+        "76s","65s"
+      ],
+      "defend_vs_utg": [
+        "88","77","66","55",
+        "AQs","AJs","ATs","A9s",
+        "KQs","KJs","KTs",
+        "QJs","QTs","JTs","T9s",
+        "AQo","AJo","ATo"
+      ],
+      "3bet_vs_btn_sb": [
+        "AA","KK","QQ","JJ","AKs","AQs","AKo",
+        "A5s","A4s","A3s",
+        "76s","65s"
+      ],
+      "notas": "65s e 76s são blefes de 3-bet com boa equity pós-flop"
+    }
+  },
+  "pko_especial": {
+    "descricao": "Bounty muda os cálculos de EV. Chame mais amplo quando há bounty em jogo.",
+    "bounty_inicial": 0.36,
+    "regras": [
+      {
+        "situacao": "Adversário tem bounty $0.36 (inicial)",
+        "acao": "Chame um pouco mais amplo"
+      },
+      {
+        "situacao": "Adversário tem bounty $1–$2 (acumulada)",
+        "acao": "Chame claramente mais amplo"
+      },
+      {
+        "situacao": "Adversário tem bounty $3+ (grande)",
+        "acao": "Chame quase qualquer mão razoável"
+      },
+      {
+        "situacao": "Stack adversário entre 15–25 BB",
+        "acao": "Cace a bounty — call mais amplo"
+      },
+      {
+        "situacao": "Stack adversário menor que 10 BB",
+        "acao": "Isolate raise com qualquer A, par, KQ+"
+      },
+      {
+        "situacao": "Você é short stack menor que 15 BB",
+        "acao": "Empurre antes de ser empurrado"
+      },
+      {
+        "situacao": "Perto do dinheiro / bolha",
+        "acao": "ICM > Bounty. Preserve fichas"
+      },
+      {
+        "situacao": "Na bolha com big stack",
+        "acao": "Pressione todos, especialmente short stacks"
+      }
+    ],
+    "push_fold_pko": [
+      {
+        "stack": "<=8 BB qualquer posição",
+        "range_push": ["AA–22","Ax","KQo+","KTs+"]
+      },
+      {
+        "stack": "<=12 BB BTN/SB",
+        "range_push": ["pares","Ax","KQs","broadways"]
+      },
+      {
+        "situacao": "Call all-in vs short stack com bounty",
+        "range_call": "Mesmo com A-high ou par pequeno"
+      }
+    ]
+  },
+  "estrategia_por_stack": {
+    "deep_50bb_mais": {
+      "descricao": "Jogue pot-control. Value mãos fortes com 3 streets. Suited connectors para setagem.",
+      "tamanho_open": "2.5x–3x",
+      "c_bet_flop": "33%–50% do pote"
+    },
+    "mid_25_50bb": {
+      "descricao": "Jogue mais direto. 3-bets viram mais compromissadas. Planeje antes de entrar no pote.",
+      "tamanho_open": "2.2x",
+      "c_bet_flop": "33%–50% do pote"
+    },
+    "short_15_25bb": {
+      "descricao": "Modo semi push/fold. Evite call/raise sem estar disposto a ir all-in.",
+      "tamanho_open": "push ou fold",
+      "c_bet_flop": "não aplicável — stack comprometido"
+    },
+    "push_fold_menos_15bb": {
+      "descricao": "Nunca abra sem intenção de ir all-in. Use charts de push/fold.",
+      "tamanho_open": "all-in",
+      "notas": "Empurre mais amplo no BTN e SB. Priorize sobrevivência na bolha."
+    }
+  },
+  "tamanhos_raise_por_nivel": [
+    {"fase": "Deep (nív. 1–6)", "tamanho": "2.5x–3x BB"},
+    {"fase": "Mid (nív. 7–14)", "tamanho": "2.2x–2.5x BB"},
+    {"fase": "Late (nív. 15+)", "tamanho": "2x BB ou push"},
+    {"fase": "vs limp na mesa", "tamanho": "4x + 1x por limper"},
+    {"fase": "C-bet no flop", "tamanho": "33%–50% do pote"}
+  ],
+  "bolha_icm": {
+    "premiacao_com_42_inscritos": "top 5 pagos",
+    "alertas": [
+      {
+        "situacao": "7–8 jogadores restantes",
+        "acao": "Atenção ICM — não arrisque sem necessidade"
+      },
+      {
+        "situacao": "Chip leader na bolha",
+        "acao": "Pressione todos os médios e short stacks"
+      },
+      {
+        "situacao": "Short stack na bolha",
+        "acao": "Push amplo — qualquer chance de dobrar"
+      }
+    ]
+  }
+}
