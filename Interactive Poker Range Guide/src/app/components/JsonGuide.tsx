@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { X, Copy, Check } from 'lucide-react';
 
 const EXAMPLE_JSON = `{
@@ -138,7 +139,7 @@ export function JsonGuide() {
         ?
       </button>
 
-      {open && (
+      {open && createPortal(
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           style={{ background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(4px)' }}
@@ -230,7 +231,8 @@ export function JsonGuide() {
               <span style={{ color: 'var(--poker-pair)' }}>AA</span> = par
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
